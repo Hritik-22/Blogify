@@ -1,52 +1,50 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import express from "express"
+import express from "express";
 const app = express();
+
 app.use(express.json());
 
-import handleDefaultErrors from "./middleware/handleDefaultErrors.js";
-import cors from "cors"
-
+// CORS
+import cors from "cors";
 app.use(cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
-    credentials: true
+  origin: process.env.FRONTEND_URL || "http://localhost:5173",
+  credentials: true
 }));
 
+// Cookie Parser
 import cookieParser from "cookie-parser";
-app.use(cookieParser({ origin: "*" }));
+app.use(cookieParser());
 
-// to male Api faster - 
-
+// Logging
 import morgan from "morgan";
-app.use(morgan("dev")) // see api response timing* 
+app.use(morgan("dev"));
 
-// most important - cashing **
-
+// In-memory cache
 import NodeCache from "node-cache";
 export const nodeCache = new NodeCache();
 
-
-// 
-// sync all models - 
-
-import { sequelize } from "./config/DbConnection.js";
+// DB Models - required to sync in index.js
 import "./model/userModel.js";
 import "./model/BlogsModel.js";
 import "./model/commentModel.js";
 import "./model/contactModel.js";
-sequelize.sync()
 
-app.get('/', (req, res) => {
-  res.send('Backend is working ✅');
+// Health check route
+app.get("/", (req, res) => {
+  res.send("Backend is working ✅");
 });
 
-import userRoutes from "./routes/userRoutes.js"
-import blogRoutes from "./routes/blogRoutes.js"
+// Routes
+import userRoutes from "./routes/userRoutes.js";
+import blogRoutes from "./routes/blogRoutes.js";
+
 app.use("/api/v1", userRoutes);
 app.use("/api/v1", blogRoutes);
 
+// Default error handler
+import handleDefaultErrors from "./middleware/handleDefaultErrors.js";
 app.use(handleDefaultErrors);
+
 export default app;
-
-
