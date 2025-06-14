@@ -1,0 +1,42 @@
+# Node modules
+server/node_modules/
+client/node_modules/
+
+# Environment variables
+server/.env
+client/.env
+
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test coverage
+coverage/
+server/coverage/
+client/coverage/
+
+# Test files
+**/__tests__/
+**/*.test.js
+**/*.test.ts
+**/*.spec.js
+**/*.spec.ts
+
+# Build outputs
+server/dist/
+client/build/
+server/.output/      # optional for some build tools
+
+# OS/System files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Misc
+*.tgz

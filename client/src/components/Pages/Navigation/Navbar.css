@@ -1,0 +1,42 @@
+.navbar-header {
+    color: whitesmoke;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.css-1tktgsa-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+    background-color: rgb(56, 56, 56) !important;
+    color: whitesmoke !important;
+}
+
+.mobile-navbar-link,
+.desktop-navbar-link {
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-navbar-link:hover,
+.desktop-navbar-link:hover {
+    color: violet;
+
+}
+
+.mobile-navbar-link:active,
+.desktop-navbar-link:active {
+    color: violet;
+}
+
+.css-hhdjsd-MuiContainer-root {
+    background-color: rgb(56, 56, 56);
+}
+
+@media screen and (max-width :600px) {
+    .MuiBox-root .css-1nsxjsr {
+        width: 100%;
+        padding: 2vmax;
+    }
+
+}

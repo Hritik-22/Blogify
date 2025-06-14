@@ -1,0 +1,35 @@
+.login-form,
+.register-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: whitesmoke;
+
+}
+
+.register-form>.MuiPaper-root,
+.login-form>.MuiPaper-root {
+    padding: 20px !important;
+}
+
+form>.MuiFormControl-root {
+    margin-top: 10px !important;
+    margin-bottom: 5px !important;
+}
+
+.css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input {
+    padding: 13px !important;
+
+}
+
+.form-hedding>h5 {
+    font-weight: 900 !important;
+    padding-bottom: 1.5vmax;
+}
+
+.navigatore>a {
+    text-decoration: none;
+    font-size: 16px;
+    color: tomato;
+}
