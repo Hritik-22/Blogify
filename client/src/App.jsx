@@ -27,7 +27,7 @@ import { userProfile } from './components/toolkit/action/authAction';
 import AdminDashboard from './components/Pages/admin/DashBoard/AdminDashboard';
 import ProtectedRoute from './Routes';
 import DashbordHome from './components/Pages/admin/DashBoard/Layout/Home/DashbordHome';
-import ViewBlogs from './components/Pages/admin/DashBoard/Blogs/viewBlogs';
+import ViewBlogs from './components/Pages/admin/DashBoard/Blogs/ViewBlogs';
 import ViewCategories from './components/Pages/admin/DashBoard/Category/viewCategories';
 import AddCategory from './components/Pages/admin/DashBoard/Category/AddCategory';
 import UpdateCategory from './components/Pages/admin/DashBoard/Category/UpdateCategory';
