@@ -8,8 +8,6 @@ app.use(express.json());
 import handleDefaultErrors from "./middleware/handleDefaultErrors.js";
 import cors from "cors"
 
-
-
 app.use(cors({
     origin: process.env.FRONTEND_URL || "http://localhost:5173",
     credentials: true
@@ -38,6 +36,10 @@ import "./model/BlogsModel.js";
 import "./model/commentModel.js";
 import "./model/contactModel.js";
 sequelize.sync()
+
+app.get('/', (req, res) => {
+  res.send('Backend is working ✅');
+});
 
 import userRoutes from "./routes/userRoutes.js"
 import blogRoutes from "./routes/blogRoutes.js"
