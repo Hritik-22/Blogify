@@ -1,6 +1,6 @@
 # Blogify 📝
 
-A powerful full-stack **MERN blog platform** with secure **OAuth2 authentication**, **role-based access**, **CRUD operations for blogs and categories**, **image uploads via Cloudinary**, and **optimized APIs using caching**. It includes password recovery via OTP, user profile management, and admin-level controls.
+A powerful full-stack **MERN blog platform** with secure ** authentication**, **role-based access**, **CRUD operations for blogs and categories**, **image uploads via Cloudinary**, and **optimized APIs using caching**. It includes password recovery via OTP, user profile management, and admin-level controls.
 
 ---
 
@@ -60,7 +60,7 @@ A powerful full-stack **MERN blog platform** with secure **OAuth2 authentication
 - **Database**: MySQL (via Sequelize ORM)
 - **Image Upload**: Cloudinary
 - **Caching**: Node-cache / Redis
-- **Authentication**: JWT + OAuth2
+- **Authentication**: JWT + password hashing
 - **Password Recovery**: OTP via Phone Number
 
 ---
@@ -188,4 +188,4 @@ Images are stored in Cloudinary, each image is saved in the following JSON forma
 
 
 > Built by : Ritik Dubey  
-> <a href="https://www.ritik.top" target="_blank">Website</a> | <a href="https://github.com/Hritik-22" target="_blank">GitHub</a> |<a href="https://github.com/Hritik-22" target="_blank">Linked in </a>
+> <a href="https://www.ritik.top" target="_blank">Website</a> | <a href="https://github.com/Hritik-22" target="_blank">GitHub</a> |<a href="https://www.linkedin.com/in/theritikdubey" target="_blank">Linked in </a>
