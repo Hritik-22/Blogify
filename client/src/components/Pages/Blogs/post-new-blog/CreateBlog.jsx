@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCategories } from '../../../toolkit/action/CategoriesAction';
-import { postBlog } from '../../../toolkit/action/blog.action';
+import { postBlog , getBlogs } from '../../../toolkit/action/blog.action';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
@@ -59,6 +59,7 @@ const CreateBlog = () => {
         dispatch(postBlog(blogData)).then((res) => {
             if (res.payload?.success === true) {
                 toast.success(res.payload.message);
+                dispatch(getBlogs())
                 navigate("/my-blogs");
             } else {
                 toast.error(res.payload || "Something went wrong");
