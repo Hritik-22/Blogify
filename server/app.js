@@ -9,8 +9,8 @@ app.use(express.json());
 // CORS
 import cors from "cors";
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:5173",
-  credentials: true
+    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    credentials: true
 }));
 
 // Cookie Parser
@@ -33,7 +33,7 @@ import "./model/contactModel.js";
 
 // Health check route
 app.get("/", (req, res) => {
-  res.send("Backend is working ✅");
+    return res.status(200).json({ success: true, message: "server is running" });
 });
 
 // Routes
