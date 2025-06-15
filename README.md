@@ -6,7 +6,7 @@ A powerful full-stack **MERN blog platform** with secure ** authentication**, **
 
 ## 🌐 Live Demo
 
-> Hosted on AWS: [Link](#)
+> Hosted on Vercel: [Link](https://blogify-ten-pearl.vercel.app/)
 
 ---
 
