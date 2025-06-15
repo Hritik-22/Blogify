@@ -13,9 +13,11 @@
     color: whitesmoke !important;
 }
 
-.mobile-navbar-link,
+.mobile-navbar-link{
+     color: black;
+}
 .desktop-navbar-link {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
