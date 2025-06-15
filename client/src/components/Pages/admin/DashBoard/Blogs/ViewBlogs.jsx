@@ -112,7 +112,7 @@ const ViewBlogs = () => {
                                     <TableRow key={item.id || index}>
                                         <TableCell align="center">
                                             <img
-                                                src={JSON.parse(item.images).publicUrl}
+                                                src={item?.images?.publicUrl}
                                                 alt={item.title}
                                                 width={50}
                                                 height={50}
