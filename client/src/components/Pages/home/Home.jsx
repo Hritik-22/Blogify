@@ -61,7 +61,9 @@ const Home = () => {
                         <CircularProgress />
                     </Box>
                 ) : error ? (
-                    <Typography color="error" align="center">{error}</Typography>
+                    <Typography color="error" align="center"> {typeof error === "string"
+    ? error
+    : error?.message || "An unexpected error occurred."}</Typography>
                 ) : (
                     <Grid container spacing={3} justifyContent="center">
                         {Array.isArray(blogs) && blogs.map(blog => (
